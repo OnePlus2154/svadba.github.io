@@ -1,0 +1,1466 @@
+/* Основные стили для ПК */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; /* Запретить прокрутку вправо */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Стили для прогресс-бара */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background-color: #111; /* Цвет фона прогресс-бара */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #cfc09f; /* Золотистый цвет */
+    transition: width 0.3s ease;
+}
+
+nav {
+    background-color: #fffcea;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 9vw;
+    letter-spacing: 0.1vw;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#cfc09f 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#cfc09f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links-container {
+    display: flex;
+    margin-left: auto; /* Подвинуть кнопки навигации вправо */
+    margin-right: -20px; /* Подвинуть кнопки навигации чуть левее */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    transition: 0.5s;
+}
+
+    .nav-links li {
+        display: inline;
+    }
+
+        .nav-links li a {
+            color: #cfc09f;
+            font-family: Times, serif;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 2vw; /* Уменьшить размер кнопки для ПК */
+            letter-spacing: 0.2vw;
+            line-height: 1;
+            margin: 0;
+            font-weight: 300;
+            text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(to bottom, #cfc09f 14%,#cfc09f 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#cfc09f 84%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            border: 2px solid #cfc09f; /* Добавить рамку */
+            padding: 5px 10px; /* Добавить отступы */
+            text-decoration: none; /* Убрать подчеркивание */
+            transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
+            height: 50px;
+        }
+
+            .nav-links li a:hover {
+                background-color: #ffecb3; /* Изменить цвет фона при наведении */
+                color: #3a2c0f; /* Изменить цвет текста при наведении */
+            }
+
+.telegram-link {
+    color: #ffd700;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .telegram-link:hover {
+        color: #e0c000;
+    }
+
+.phone-number {
+    color: #ffd700;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .phone-number:hover {
+        color: #e0c000;
+    }
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-divider {
+    height: 2px;
+    background-color: #ffd700;
+    margin: 50px 0;
+}
+#telegram-link {
+    position: relative;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .background-image {
+        background-image: url('background-mobile.jpg');
+    }
+}
+
+.telegram-link {
+    color: #ffd700;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.telegram-link:hover {
+    color: #e0c000;
+}
+
+/* Медиа-запросы для телефонов */
+@media (max-width: 768px) {
+    .telegram-link {
+        font-size: 18px;
+    }
+}
+
+#home {
+    position: relative;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home-content {
+    z-index: 1;
+    text-align: center;
+}
+
+#home h1 {
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    line-height: 1;
+    margin-top: -60px;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #3a2c0f 14%,#634f2c 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.home-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.home-point {
+    text-align: center;
+}
+
+    .home-point i {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .home-point p {
+        color: #cfc09f;
+        font-family: Times, serif;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 2vw;
+        letter-spacing: 0.02vw;
+        line-height: 4;
+        margin: 0;
+        font-weight: 300;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+    .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .timer-segment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timer-part {
+        background-color: #3a2c0f;
+        color: #cfc09f;
+        font-size: 24px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-family: Times, serif;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #3a2c0f 14%,#634f2c 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+    
+    .timer-label {
+        color: #cfc09f;
+        font-size: 14px;
+        text-align: center;
+        font-family: Times, serif;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #3a2c0f 14%,#634f2c 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+    
+    .timer-line {
+        width: 2px;
+        height: 20px;
+        background-color: #3a2c0f;
+        border-radius: 2px;
+    }
+    
+
+#about, #requirements, #reviews {
+    background-color: #fffcea;
+    padding: 50px 20px;
+}
+
+#about {
+    height: auto; /* Установите автоматическую высоту */
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+    /* Стили для заголовка "О нас" и отзывов */
+    #about h2.gold-glow, #requirements h2.gold-glow {
+        color: #cfc09f;
+        font-family: Times, serif;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 5vw;
+        letter-spacing: 1vw;
+        line-height: 1;
+        margin: 0;
+        font-weight: 300;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #cfc09f 14%,#cfc09f 16%, #cfc09f 20%, #cfc09f 22%,#cfc09f  40%,#cfc09f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+    /* Стили для заголовка отзывов с уменьшенным размером */
+    #reviews h2 {
+        color: #cfc09f;
+        font-family: Times, serif;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 2vw; /* Уменьшить размер шрифта */
+        letter-spacing: 1vw;
+        line-height: 1;
+        margin: 0;
+        font-weight: 300;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #cfc09f 14%,#cfc09f 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#cfc09f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    #reviews h2 {
+        font-size: 7vw; /* Увеличить размер шрифта для мобильных устройств */
+    }
+    /* Медиа-запрос для ПК */
+    @media (min-width: 769px) {
+        #reviews h2 {
+            margin-top: 50px; /* Опустить заголовок ниже на ПК */
+        }
+    }
+}
+
+.custom-icon {
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 9vw;
+    letter-spacing: 1vw;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#cfc09f 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#cfc09f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+#about p, #requirements p, #reviews p {
+    font-size: 24px;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+}
+
+#reviews {
+    height: auto; /* Установите автоматическую высоту */
+    padding: 50px 20px;
+    background-color: #fffcea;
+}
+
+.about-content, .requirements-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.about-item, .requirement-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+    .about-item i, .requirement-item i {
+        font-size: 64px;
+        margin-bottom: 20px;
+        color: #ffd700;
+    }
+
+    .about-item p, .requirement-item p {
+        font-size: 24px;
+    }
+
+    .about-item .gold-text, .requirement-item .gold-text {
+        color: #cfc09f;
+        font-family: Times, serif;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 1vw;
+        letter-spacing: 0.3vw;
+        line-height: 1;
+        margin: 0;
+        font-weight: 300;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+    .requirement-item.center-text {
+        grid-column: span 3;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+/* Стили для новой секции с галереей */
+#gallery {
+    background-color: #111;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#gallery h2.gold-glow {
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 9vw;
+    letter-spacing: 1vw;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#cfc09f 16%, #cfc09f 20%, #cfc09f 22%,#cfc09f 40%,#cfc09f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 фотографии в ряд */
+    gap: 10px; /* Отступы между элементами */
+    padding: 10px 0; /* Внутренние отступы */
+    height: auto; /* Увеличим высоту контейнера */
+}
+
+.gallery-item {
+    position: relative;
+    height: 100%; /* Убедимся, что элементы занимают всю высоту */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%; /* Убедимся, что изображения занимают всю высоту элемента */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #cfc09f; /* Рамка вокруг фотографии */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 10px; /* Позиционирование снизу */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Уменьшить ширину для рамки */
+    background-color: transparent; /* Прозрачный фон для подписи */
+    color: #cfc09f;
+    font-family: Times, serif;
+    font-size: 16px;
+    padding: 5px 10px; /* Уменьшить внутренние отступы */
+    border: 2px solid #cfc09f; /* Рамка вокруг подписи */
+    border-radius: 5px; /* Скругление углов */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8); /* Внутренняя тень для черного фона */
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Медиа-запросы для ПК */
+@media (min-width: 768px) {
+    .gallery-container {
+        height: 600px; /* Увеличим высоту контейнера для ПК */
+    }
+
+    .gallery-item {
+        height: 290px; /* Увеличим высоту элемента для ПК */
+    }
+
+    .gallery-image {
+        height: 100%; /* Убедимся, что изображения занимают всю высоту элемента */
+    }
+
+    .gallery-caption {
+        font-size: 20px; /* Увеличим размер шрифта для ПК */
+    }
+}
+
+/* Медиа-запросы для телефонов */
+@media (max-width: 767px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 фотографии в ряд */
+        height: auto; /* Автоматическая высота контейнера */
+    }
+
+    .gallery-item {
+        height: auto; /* Автоматическая высота элемента */
+    }
+
+    .gallery-image {
+        height: auto; /* Автоматическая высота изображения */
+    }
+
+    .gallery-caption {
+        font-size: 18px; /* Увеличим размер шрифта для телефонов */
+    }
+}
+
+/* Стили для перетаскивания на ПК */
+.gallery-container:active {
+    cursor: grabbing; /* Курсор при перетаскивании */
+}
+
+/* Стили для перетаскивания на ПК */
+.gallery-container:active {
+    cursor: grabbing; /* Курсор при перетаскивании */
+}
+
+/* Стили для отзывов */
+.review-carousel {
+    display: flex;
+    flex-direction: column; /* Расположение в столбик */
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ограничить ширину отзывов */
+    margin: 0 auto; /* Центрировать отзывы */
+}
+
+.review {
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет фона для рамки */
+    border: 2px solid #cfc09f; /* Цвет рамки */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Внутренние отступы */
+    margin-bottom: 20px; /* Отступ снизу между отзывами */
+    text-align: center; /* Центрирование текста */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+.review-text {
+    color: #cfc09f;
+    font-family: Times, serif;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.review-name {
+    font-size: 24px;
+    margin-bottom: 5px; /* Отступ снизу от имени */
+}
+
+.review-date {
+    font-size: 18px;
+    margin-bottom: 10px; /* Отступ снизу от возраста */
+}
+
+.review-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* Медиа-запросы для ПК */
+@media (min-width: 768px) {
+    .review-container {
+        flex-direction: row; /* Расположение в ряд */
+        flex-wrap: wrap; /* Разрешить перенос на новую строку */
+    }
+
+    .review {
+        flex: 1 0 45%; /* Ширина элемента 45% от контейнера */
+    }
+}
+
+.carousel-button {
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+    .carousel-button:hover {
+        background-color: #e0c000;
+    }
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .indicator.active {
+        background-color: #ff69b4; /* Розовый цвет */
+    }
+
+#telegram-link {
+    background-color: #111;
+    padding: 50px 20px;
+}
+
+ /* Стили для кнопки внизу сайта */
+#telegram-link a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffd700; /* Цвет фона */
+    color: #000; /* Цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 18px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    border: 2px solid #cfc09f; /* Добавить рамку */
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#telegram-link a:hover {
+    background-color: #e0c000; /* Изменить цвет фона при наведении */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #000; /* Черный фон */
+    margin: 15% auto; /* Подвинуть модальное окно ниже */
+    padding: 20px;
+    border: 2px solid #cfc09f; /* Золотая рамка */
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+.modal-content p {
+    color: #cfc09f; /* Золотой цвет текста */
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #3a2c0f 14%,#3a2c0f 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    margin-bottom: 20px; /* Отступ снизу от текста */
+}
+
+.modal-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ffd700; /* Цвет фона */
+    color: #000; /* Цвет текста */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    border: 2px solid #cfc09f; /* Добавить рамку */
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-button:hover {
+    background-color: #e0c000; /* Изменить цвет фона при наведении */
+}
+
+/* Медиа-запросы для телефонов */
+@media (max-width: 767px) {
+    .modal-content {
+        margin: 50% auto; /* Подвинуть модальное окно ниже на телефоне */
+    }
+
+    .modal-content p {
+        font-size: 8vw; /* Увеличить размер шрифта на телефоне */
+    }
+}
+
+/* Уменьшить кнопки навигации и расположить их в строку на устройствах с шириной экрана от 769 до 1524 пикселей */
+@media (min-width: 769px) and (max-width: 1524px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Расположить кнопки в строку */
+        gap: 10px; /* Отступы между кнопками */
+        justify-content: flex-end; /* Выравнивание по правому краю */
+    }
+
+    .nav-links li a {
+        font-size: 1.2vw; /* Уменьшите размер текста */
+        padding: 8px 12px; /* Уменьшите внутренние отступы */
+        white-space: nowrap; /* Предотвращает перенос текста на новую строку */
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 10px; /* Отступ слева для контактной информации */
+    }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .nav-links-container {
+        margin-left: 0; /* Убрать отступы для мобильных устройств */
+        margin-right: 0; /* Убрать отступы для мобильных устройств */
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo-container {
+        flex-direction: row;
+    }
+
+    section {
+        height: auto;
+    }
+
+    .home-points {
+        grid-template-columns: 1fr;
+        gap: 0px; /* Уменьшить отступы между элементами для мобильных устройств */
+        width: 100%; /* Вернуть ширину блока для мобильных устройств */
+    }
+
+    .about-content, .requirements-content {
+        grid-template-columns: 1fr;
+    }
+
+    #about h2.gold-glow, #requirements h2.gold-glow {
+        font-size: 45px;
+        margin-top: -25px; /* Поднять заголовок выше */
+    }
+
+    #home h1 {
+        font-size: 32px;
+        margin-top: 80px; /* Поднять заголовок выше */
+    }
+
+    .home-point p, .about-item p, .requirement-item p {
+        font-size: 18px;
+    }
+
+    .home-point i, .about-item i, .requirement-item i {
+        font-size: 32px;
+    }
+
+    .contact-info {
+        color: #cfc09f;
+        font-family: Times, serif;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 3vw;
+        letter-spacing: 0.5vw;
+        line-height: 1;
+        margin: 0;
+        font-weight: 300;
+        text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom, #c6bb9f 14%,#c6bb9f 16%, #c6bb9f 20%, #c6bb9f 22%,#c6bb9f 40%,#c6bb9f 84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+    .telegram-link {
+        font-size: 24px;
+    }
+
+    .phone-number {
+        font-size: 20px;
+    }
+
+    /* Новые стили для увеличения размера текста на мобильных устройствах */
+    .about-item .gold-text, .requirement-item .gold-text {
+        font-size: 24px; /* Увеличить размер текста */
+    }
+
+    .about-item p, .requirement-item p {
+        font-size: 20px; /* Увеличить размер текста */
+    }
+
+    /* Новые стили для увеличения размера иконок на мобильных устройствах */
+    .home-point i.custom-icon, .about-item i.custom-icon, .requirement-item i.custom-icon {
+        font-size: 48px; /* Увеличить размер иконок */
+    }
+}
+#about {
+    background-color: #fffcea;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#current-date {
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #3a2c0f 14%,#634f2c 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.calendar-divider {
+    height: 2px;
+    background-color: #ffd700;
+    margin: 20px 0;
+}
+
+.calendar {
+    display: inline-block;
+    text-align: center;
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 400px; /* Максимальная ширина для больших экранов */
+    margin: 0 auto; /* Центрирование календаря */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.calendar-header,
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 колонок для дней недели */
+    gap: 5px; /* Уменьшаем отступы для мобильных */
+}
+
+.calendar-header span,
+.calendar-body span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Занимает всю доступную ширину ячейки */
+    aspect-ratio: 1; /* Сохраняем квадратную форму */
+    color: #cfc09f;
+    font-family: Times, serif;
+    font-size: 16px; /* Немного уменьшаем для мобильных */
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #c6bb9f 14%,#c6bb9f 16%, #c6bb9f 20%, #c6bb9f 22%,#c6bb9f 40%,#c6bb9f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.highlight-heart {
+    color: #ff0000;
+    font-size: 24px; /* Уменьшаем размер сердца для мобильных */
+    font-weight: bold;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 480px) {
+    .calendar {
+        width: 95%; /* Чуть меньше ширины экрана */
+    }
+    
+    .calendar-header span,
+    .calendar-body span {
+        font-size: 14px; /* Ещё меньше размер шрифта для маленьких экранов */
+    }
+    
+    .highlight-heart {
+        font-size: 20px;
+    }
+}
+
+.date-container {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в столбик */
+    align-items: center;
+    gap: 70px; /* Увеличьте это значение для большего отступа */
+}
+
+
+.vertical-line {
+    width: 2px;
+    height: 80px; /* Увеличьте высоту линии */
+    background-color: #cfc09f; /* Цвет линии */
+    border-radius: 2px; /* Скругление углов */
+    margin-top: -41px; /* Смещение вверх */
+}
+
+
+#current-date,
+#event-title {
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #3a2c0f 14%,#634f2c 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+.gold-glow {
+    color: #cfc09f;
+    font-family: Times, serif;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #c6bb9f 14%,#cfc09f 16%, #c6bb9f 20%, #c6bb9f 22%,#c6bb9f 40%,#c6bb9f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+/* Стиль для <span> с увеличенным размером шрифта */
+span.gold-glow {
+    font-size: 1.1em;
+}
+
+/* Стиль для <p> с уменьшенным размером шрифта */
+p.gold-glow {
+    font-size: 3em; /* Уменьшите размер шрифта */
+}
+/* Стили для блока с именами */
+.couple-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative; /* Добавляем для позиционирования линии */
+  }
+  
+/* Верхняя линия (оставляем как было) */
+.couple-names .vertical-line:first-child {
+    height: 100px;
+  }
+  
+  /* Нижняя линия - модифицируем */
+  .couple-names .vertical-line:last-child {
+    height: 100px; /* Можно регулировать длину */
+  }
+  
+  /* Контейнер имён */
+  .names-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 50px; /* Добавляем отступ снизу */
+  }
+  
+  .name {
+    color: #cfc09f;
+    font-family: Times, serif;
+    text-transform: uppercase;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    line-height: 1;
+    font-weight: 300;
+    text-shadow: -1px 0 1px #3a2c0f, 0 1px 1px #3a2c0f;
+    background: linear-gradient(to bottom, #3a2c0f 14%,#3a2c0f 16%, #3a2c0f 20%, #3a2c0f 22%,#3a2c0f 40%,#3a2c0f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ampersand {
+    color: #3a2c0f;
+    font-family: Times, serif;
+    font-size: 2vw;
+    margin: 5px 0;
+  }
+  
+  .vertical-line {
+    width: 2px;
+    height: 100px;
+    background-color: #3a2c0f;
+    border-radius: 2px;
+  }
+  
+  /* Адаптация для мобильных */
+  @media (max-width: 768px) {
+    .couple-names {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .name {
+      font-size: 24px;
+    }
+    
+    .ampersand {
+      font-size: 20px;
+    }
+    
+    .vertical-line {
+      height: 40px;
+      width: 1px;
+    }
+  }
+  .name {
+    animation: fadeInUp 1s ease-out both;
+  }
+  
+  .name:last-child {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .vertical-line {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  .home-points-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 40px; /* Высота линии */
+    background-color: #3a2c0f;
+    margin: 5px 0;
+}
+
+.home-point p {
+    margin: 0;
+    padding: 0;
+    color: #3a2c0f;
+    font-family: Times, serif;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .home-point p {
+        font-size: 16px;
+    }
+    
+    .vertical-divider {
+        height: 30px;
+    }
+}
+.home-point {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.home-point:first-child {
+    animation-delay: 0.2s;
+}
+
+.home-point:last-child {
+    animation-delay: 0.4s;
+}
+
+.vertical-divider {
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: growIn 0.3s 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growIn {
+    to {
+        transform: scaleY(1);
+    }
+}
+.home-point:last-child p {
+    animation: strongPulse 2s infinite ease-in-out;
+}
+
+@keyframes strongPulse {
+    0%, 100% { 
+        opacity: 0.3;
+        text-shadow: none; 
+    }
+    50% { 
+        opacity: 1; 
+        text-shadow: 0 0 15px #3a2c0f, 
+                    0 0 20px rgba(207, 192, 159, 0.8);
+    }
+}
+.name {
+    animation: fadeInUp 1s ease-out both;
+  }
+  
+  .name:last-child {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .section-divider-image {
+    width: 100%;
+    height: 30vh; /* Высота изображения */
+    overflow: hidden;
+    position: relative;
+}
+
+.section-divider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: sepia(30%) brightness(80%); /* Эффект "винтаж" */
+}
+#dresscode {
+    background-color: #fffcea;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.dresscode-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dresscode-title {
+    margin-bottom: 40px;
+}
+
+.title-line {
+    font-family: 'Times New Roman', serif;
+    color: #cfc09f;
+    font-size: 5vw;
+    letter-spacing: 0.5vw;
+    line-height: 1.2;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%,#cfc09f 20%,#cfc09f 22%,#ffecb3 40%,#cfc09f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+}
+
+.dresscode-text {
+    font-family: 'Georgia', serif;
+    color: #3a2c0f;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.dresscode-text p {
+    margin: 10px 0;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .title-line {
+        font-size: 10vw;
+    }
+    
+    .dresscode-text {
+        font-size: 1rem;
+    }
+}
+/* Обновленные стили для секции dresscode */
+.dresscode-container {
+    position: relative;
+    padding: 40px;
+    border: 2px solid #cfc09f;
+    border-radius: 15px;
+    background-color: rgba(255, 252, 234, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Дополнительные декоративные элементы */
+.dresscode-container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(to right, 
+        transparent, 
+        #cfc09f, 
+        #634f2c, 
+        #cfc09f, 
+        transparent);
+    border-radius: 2px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .dresscode-container {
+        padding: 25px;
+    }
+    
+    .dresscode-container::after {
+        bottom: -15px;
+        height: 12px;
+    }
+}
+.color-ribbons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.ribbon {
+    width: 20px;
+    height: var(--height);
+    background-color: var(--color);
+    margin: 0 3px;
+    position: relative;
+    transform-origin: top;
+    animation: sway 3s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+.ribbon::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Анимация покачивания */
+@keyframes sway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fffcea;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #cfc09f;
+    text-align: center;
+    max-width: 80%;
+  }
+  
+  .modal-content p {
+    color: #3a2c0f;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .modal-buttons button {
+    padding: 10px 30px;
+    border: 1px solid #cfc09f;
+    background: linear-gradient(to bottom, #cfc09f, #b8a88a);
+    color: #3a2c0f;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .modal-buttons button:hover {
+    background: linear-gradient(to bottom, #b8a88a, #cfc09f);
+  }
+  .color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #cfc09f; /* Декоративная линия над кружками */
+}
+
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color);
+    border: 2px solid white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.color-circle:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Подписи под кружками (опционально) */
+.color-circle::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #3a2c0f;
+    white-space: nowrap;
+    margin-top: 5px;
+}
